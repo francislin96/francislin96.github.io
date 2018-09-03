@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Marble Tilt Game</title>
+	<meta name="description" content="Francis Lin Marble Tilt Game">
+	<meta name="author" content="Francis Lin">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="../../css/default.css">
+	<link rel="stylesheet" href="../../css/page.css">
+   <link rel="stylesheet" href="../../css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../images/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="../../index.html">Home</a></li>
+            <li><a class="smoothscroll" href="../../index.html#about">About</a></li>
+            <li class="current"><a class="smoothscroll" href="../../index.html#projects">Projects</a></li>
+            <li><a class="smoothscroll" href="../../index.html#resume">Experience</a></li>
+            <li><a class="smoothscroll" href="../../index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+    <!-- Content
+   ================================================== -->
+    
+    <section id="page">
+        <div class="row">
+            <div class="content-header">
+                <h1>Marble Tilt Game</h1>
+                <h2>June 2018&nbsp;&nbsp;|&nbsp;&nbsp;Arduino, Processing, Microcontrollers</h2>
+            </div>
+            
+            <h3>Description</h3>
+            
+            <p>During Spring 2018, an Introduction to Microcontrollers course, instructed by Professor Jacob Schmidt, was offered for the very first time at UCLA. The course included topics such as microcontrollers in robotics and motion, sensing and data acquisition, communication with specialty integrated circuits, using Processing language, digital and analog input/output, SPI and I2C, interrupts, and other advanced topics.</p>
+            
+            <p>In order to solidify the concepts presented in the lectures, a final design project was assigned to the class. The prompt: build something cool.</p>
+            
+            <p>For the final project, I decided to build both physical and virtual versions of a marble tilt game.</p>
+            
+            <div class="text-container">
+                
+                <div class="twelve columns">
+                    <div class="download">
+                        <a href="https://github.com/francislin96/Virtual-Marble-Tilt-Game" class="button" target="new"><i class="fa fa-download"></i>Virtual Game</a>
+                    </div>
+                </div>
+                
+                <div class="twelve columns">
+                    <div class="download">
+                        <a href="https://github.com/francislin96/Physical-Marble-Tilt-Game" class="button" target="new"><i class="fa fa-download"></i>Physical Game</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <h3>Virtual Marble Tilt Game</h3>
+            
+            <p>The virtual marble tilt game was visualized using Processing and controlled using the LIS3DH accelerometer connected to an Arduino Uno. The GUI for the game was written in Processing.</p>
+            
+            <div class="row">
+            
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="virtual/schematic.PNG" target="new"><img alt="Schematic" src="virtual/schematic.PNG"></a>
+                        <figcaption>Schematic</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="virtual/home.jpg" target="new"><img alt="Homepage" src="virtual/home.JPG"></a>
+                        <figcaption>Homepage</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="virtual/maze.jpg" target="new"><img alt="Maze" src="virtual/maze.jpg"></a>
+                        <figcaption>Virtual Maze</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="virtual/highscores.jpg" target="new"><img alt="Maze" src="virtual/highscores.jpg"></a>
+                        <figcaption>High Scores</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            
+            <h3>Physical Marble Tilt Game</h3>
+            
+            <p>A LIS3DH accelerometer attached to an Arduino Uno controlled the motion of 2 TowerPro SG-5010 servos which tilted the platform of the physical marble tilt game. The frame for the game was 3D-printed using services on UCLA campus. An IR LED and phototransistor were placed at the end of the maze to detect when a small ball was covered the ending spot. The GUI for the game was written in Processing and is essentially the virtual GUI with the addition of a timer.</p>
+            
+            <div class="row">
+            
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="physical/schematic.PNG" target="new"><img alt="Schematic" src="physical/schematic.PNG"></a>
+                        <figcaption>Schematic</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="physical/LIS3DH.JPG" target="new"><img alt="LIS3DH" src="physical/LIS3DH.JPG"></a>
+                        <figcaption>LIS3DH</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="physical/servos.JPG" target="new"><img alt="TowerPro SG-5010 servos" src="physical/servos.JPG"></a>
+                        <figcaption>TowerPro SG-5010 servos</figcaption>
+                    </figure>
+                </div>
+
+                <div class="three columns">
+                    <figure class="cap-bot">
+                        <a href="physical/maze.JPG" target="new"><img alt="Maze" src="physical/maze.JPG"></a>
+                        <figcaption>3D-Printed Maze</figcaption>
+                    </figure>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+            
+                <div class="six columns">
+                    <figure class="cap-bot">
+                        <a href="physical/overview.JPG" target="new"><img alt="Overview" src="physical/overview.JPG"></a>
+                        <figcaption>Physical Marble Tilt Game</figcaption>
+                    </figure>
+                </div>
+
+                <div class="six columns">
+                    <figure class="cap-bot">
+                        <a href="physical/closeup.JPG" target="new"><img alt="Closeup" src="physical/closeup.JPG"></a>
+                        <figcaption>Physical Marble Tilt Maze</figcaption>
+                    </figure>
+                </div>
+            
+            </div>
+            
+            <p>Here is a video of the game in action:</p>
+            
+            <div class="row">
+                <div class="two columns"></div>
+                <div class="eight columns video">
+                    <iframe src="https://www.youtube.com/embed/aAxcIYwDVG0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="two columns"></div>
+            </div>
+            
+            <h3>Summary</h3>
+            
+            <p>This was a very fun, exciting, and hands-on class which taught me so much about circuit design and microcontrollers. I wish this class was offered earlier so that I could apply some of the skills I learned here to some of the hackathons that happen on campus. Nevertheless, this class will help me tremendously in planning and executing my future pet projects.</p>
+                
+        </div>
+    </section>
+    </body>
+</html>

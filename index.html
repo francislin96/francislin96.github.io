@@ -1,47 +1,512 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <title>Francis Lin</title>
 
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<meta name="description" content="I am a Biomedical Engineer who likes to create">  
+    <!--- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+	<title>Francis Lin</title>
+	<meta name="description" content="I am a Biomedical Engineer that loves to create">
 	<meta name="author" content="Francis Lin">
 
-   <link rel="stylesheet" href="/base.css">
-    <!-- <link rel="shortcut icon" href="favicon.png" > -->
+    <!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+
+    <!-- Script
+    ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.png" >
 
 </head>
 
 <body>
-    <header id="main-header">
 
-   <div class="inner-header">
-       <div class="logo">
-           <a class="smoothscroll" href="#home">FRANCIS LIN</a>
-       </div>
+    <!-- Header
+    ================================================== -->
+    <header id="home">
 
-	   <nav id="navigation">
-           <ul id="nav" class="nav">
-               <li><a class="smoothscroll" href="#home">Home</a></li>
-               <li><a class="smoothscroll" href="#projects">Projects</a></li>
-               <li><a class="smoothscroll" href="#impossible-list">Impossible List</a></li>
-               <li><a class="smoothscroll" href="#contact">Contact</a></li>
-           </ul> 
-       </nav>     
-     </div> 
-    </header> 
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#no-nav-wrap" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+                <li><a class="smoothscroll" href="#about">About</a></li>
+                <li><a class="smoothscroll" href="#projects">Projects</a></li>
+                <li><a class="smoothscroll" href="#resume" target="_blank">Experience</a></li>
+                <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            </ul> <!-- end #nav -->
+            
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1>Biomedical</h1>
+                <h1>Engineer</h1>
+                <h3>Hello! My name is Francis Lin.</h3>
+                <h3>Welcome to my personal website!</h3>
+                <!--<h3>Check out some of my <a class ="smoothscroll" href="#projects">projects</a>, </h3>
+                <h3>and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>-->
+                <hr />
+                <!--<ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="www.linkedin.com/in/aboutfrancislin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>-->
+            </div>
+        </div>
+    </header> <!-- Header End -->
+
     
-    <section class="home-content">
-        <h1>Hi, I'm Francis</h1>
-        <h2>I am a Biomedical Engineer who likes to create</h2>
-    </section>
+    <!-- About Section
+    ================================================== -->
+    <section id="about">
+
+        <div class="row">
+            
+            
+            <div class="four columns">
+
+                <img class="profile-pic"  src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="eight columns main-col">
+
+                <h2>Hello! My name is Francis Lin.</h2>
+            
+                <p>I recently received a B.S. in Bioengineering at the University of California, Los Angeles and am especially interested in the intersection of medical devices, biotech, and data science.</p>
+                
+                <p>I use this personal website to help me track my progress in my projects and in my life. If you are interested in <a class="smoothscroll" href="#projects">projects </a> I'm working on, have a similar goal on your <a href="projects/impossiblelist/impossiblelist.html">Impossible List</a>, or just want to say hello, <a class="smoothscroll" href="#contact"> send me a message</a> so we can arrange a time and place to meet. Hope to hear from you soon!</p>
+               
+            </div>
+
+        </div>  <!-- text-container ends -->
+        
+    </section> <!-- About Section End -->
     
+    <!-- Projects Section
+    ================================================== -->
     <section id="projects">
+
+        <div class="row">
+
+            <div class="twelve columns collapsed">
+
+                <h2>Check Out Some of My Projects!</h2>
+
+                <!-- projects-wrapper -->
+                <div id="projects-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+                        
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/introML/introML.html" title="">
+                                <img alt="" src="images/project_icons/icon-introML.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>Intro to Machine Learning</h5>
+                                        <p>Python: sklearn</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- Intro to Machine Learning end -->
+<!--
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/sleep/sleep.html" title="">
+                                <img alt="" src="images/project_icons/retrocam.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>Sleep Data</h5>
+                                        <p>Excel, Data Analysis</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- Sleep Data end -->
+
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/nbahack2018/nbahack2018.html" title="">
+                                <img alt="" src="images/project_icons/icon-nbahack2018.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>2018 NBA Hackathon</h5>
+                                        <p>Python: pandas</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- 2018 NBA Hackathon end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/nbahack2017/nbahack2017.html" title="">
+                                <img alt="" src="images/project_icons/icon-nbahack2017.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>2017 NBA Hackathon</h5>
+                                        <p>Excel VBA</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- 2017 NBA Hackathon end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/marblemaze/marblemaze.html" title="">
+                                <img alt="" src="images/project_icons/icon-marblemaze.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>Marble Tilt Game</h5>
+                                        <p>Arduino, Processing, Microcontrollers</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- Intro to Microcontrollers end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/natbus/natbus.html" title="">
+                                <img alt="" src="images/project_icons/icon-natbus.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>IEEE Mini Natbus</h5>
+                                        <p>Teensy, EAGLE, PID Control</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- IEEE Mini Natbus end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="https://www.amazon.com/Unofficial-2016-2017-NBA-Season-Scores/dp/B074SBHKJZ/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1505705173&sr=1-1&keywords=nba+scores" title="">
+                                <img alt="" src="images/project_icons/icon-alexa.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>2016-2017 NBA Season Scores</h5>
+                                        <p>Amazon Alexa</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- Alexa end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/autocad/autocad.html" title="">
+                                <img alt="" src="images/project_icons/icon-medtronic.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>Medtronic HQ Model</h5>
+                                        <p>AutoCAD 2016</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- Medtronic HQ Modeling end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/usie/usie.html" title="">
+                                <img alt="" src="images/project_icons/icon-usie.png">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>USIE: The Biology and Engineering of Superheroes</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- USIE end -->
+
+                    <div class="columns projects-item">
+                        <div class="item-wrap">
+                            <a href="projects/pasCARE/pasCARE.html" title="">
+                                <img alt="" src="images/project_icons/icon-pascare.jpg">
+                                <div class="overlay">
+                                    <div class="projects-item-meta">
+                                        <h5>pasCARE</h5>
+                                        <p>Medical Device Startup</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- pasCARE end -->
+
+                </div> <!-- projects-wrapper end -->
+
+            </div> <!-- twelve columns end -->
+
+        </div> <!-- row End -->
+
+    </section> <!-- Projects Section End -->
+    
+    
+    <!-- Resume Section
+    ================================================== -->
+    <section id="resume">
+
+        <div class="text-container">
+            
+            <div class="row">
+                
+                <div class="four column">
+                    <h2>Experience</h2>
+                </div>
+                
+                <div class="eight column">
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="https://www.amgen.com/">Amgen</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Aug '18 - Present</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Associate IS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="https://domstat.med.ucla.edu/pages/">Department of Medicine Statistics Core</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Oct '17 - Mar '18</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Student Statistician</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="https://www.amgen.com/">Amgen</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Jul '17 - Sep '17</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>GCOIS Intern</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="https://www.risksciences.ucla.edu/">B. John Garrick Institute for the Risk Sciences</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Aug '16 - Jun '17</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Webmaster</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="projects/pasCARE/pasCARE.html">pasCARE</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Jan '16 - Mar '17</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Co-Founder</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="http://innovate.ee.ucla.edu/">Ozcan Research Group</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Oct '15 - Jun '18</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Undergraduate Researcher</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="http://bmes.seas.ucla.edu/">Biomedical Engineering Society</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Oct '14 - Jun '18</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Mentorship Chair, Industry Chair</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row job-position">
+                        <div class="eight column">
+                            <h3><a href="https://www.seasoasa.ucla.edu/internship-opportunities/">UCLA Engineering Undergraduate Internship Program</a></h3>
+                        </div>
+                        <div class="four column">
+                            <p>Oct '14 - Jun '18</p>
+                        </div>
+                        <div class="twelve column">
+                            <p>Job/Internship Clerk</p>
+                        </div>
+                    </div>
+                    
+                    <div class="columns download">
+                        <a href="Francis%20Lin%20Resume.pdf" class="button" download><i class="fa fa-download"></i>Download Resume</a>
+                    </div>
+
+                </div>
+                
+            </div> <!-- end row -->
+        </div>  <!-- text-container ends -->
+   </section> <!-- Resume Section End-->
+    
+    
+    <!-- Contact Section
+    ================================================== -->
+    <section id="contact">
         
+        <div class="text-container">
+    
+   	        <div class="row">
+                <div class="twelve">
+                    <h1>Contact Me</h1>
+                    <div class="columns">
+                        <p>See anything that interested you? Have any questions about my projects? Shoot me an email!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row form-section">
+                
+                <div id="contact-form" class="twelve columns">
+                    
+                    <form name="contactForm" id="contactForm" method="post" action="">
+
+      			       <fieldset>
+                           
+                           <div class="row">
+                               
+                               <!-- First Name -->
+	                           <div class="six columns mob-whole">
+                                   <label for="contactFname">First Name <span class="required">*</span></label>
+                                   <input name="contactFname" type="text" id="contactFname" placeholder="First Name" value="" />
+                               </div>
+                               
+                               <!-- Last Name -->
+	                           <div class="six columns mob-whole">	
+                                   <label for="contactLname">Last Name <span class="required">*</span></label>
+                                   <input name="contactLname" type="text" id="contactLname" placeholder="Last Name" value="" />
+                               </div>
+                           
+                           </div>
+
+                           <div class="row">
+                               
+                               <!-- Email-->
+                               <div class="six columns mob-whole">
+                                   <label for="contactEmail">Email <span class="required">*</span></label>
+                                   <input name="contactEmail" type="text" id="contactEmail" placeholder="Email" value="" />
+                               </div>
+                               
+                               <!-- Subject -->
+                               <div class="six columns mob-whole">
+                                   <label for="contactSubject">Subject</label>
+                                   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
+                               </div>
+                           
+                           </div>
+
+                           <div class="row">
+                               
+                               <!-- Message -->
+                               <div class="twelve columns">
+                                   <label  for="contactMessage">Message <span class="required">*</span></label>
+                                   <textarea name="contactMessage"  id="contactMessage" placeholder="Your Message" rows="8" cols="50" ></textarea>
+                               </div>
+
+                           </div>
+                           
+                           <div>
+                               
+                               <!-- Send Message -->
+                               <button class="submit full-width">Send Message</button>
+                               <div id="image-loader">
+                                   <img src="images/loader.gif" alt="" />
+                               </div>
+                               
+                           </div>
+                        
+                        </fieldset>
+                    
+                    </form> <!-- /contactForm -->
+                    
+                    <!-- message box -->
+                    <div id="message-warning"></div>
+                    <div id="message-success">
+                        <i class="fa fa-check"></i>Your message was sent, thank you!<br />
+                    </div>
+                
+                </div> <!-- /contact-form -->
+            
+            </div> <!-- /form-section -->
+            
+        </div>
         
-    </section>
+    </section>  <!-- Contact Section End -->
 
 
+   <!-- Footer
+   ================================================== -->
+   <footer>
+       
+       <div class="row">
+           
+           <div class="twelve columns">
+               
+               <ul class="social-links">
+                   <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                   <li><a href="www.instagram.com/flinfotos"><i class="fa fa-instagram"></i></a></li>
+                   <li><a href="www.linkedin.com/in/aboutfrancislin"><i class="fa fa-linkedin"></i></a></li>
+               </ul>
+               <p class="copyright">Template @ styleshout.com</p>
+           
+           </div>
+       
+       </div>
+    
+    </footer> <!-- Footer End -->
 
+    
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/init.js"></script>
 
 </body>
+
+</html>

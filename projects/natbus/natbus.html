@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Mini Natbus</title>
+	<meta name="description" content="Francis Lin Mini Natbus">
+	<meta name="author" content="Francis Lin">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="../../css/default.css">
+	<link rel="stylesheet" href="../../css/page.css">
+   <link rel="stylesheet" href="../../css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../images/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="../../index.html">Home</a></li>
+            <li><a class="smoothscroll" href="../../index.html#about">About</a></li>
+            <li class="current"><a class="smoothscroll" href="../../index.html#projects">Projects</a></li>
+            <li><a class="smoothscroll" href="../../index.html#resume">Experience</a></li>
+            <li><a class="smoothscroll" href="../../index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+    <!-- Content
+   ================================================== -->
+    <section id="page">
+        <div class="row">
+            <div class="content-header">
+                <h1>Mini Natbus</h1>
+                <h2>May 2016 - June 2016&nbsp;&nbsp;|&nbsp;&nbsp;Teensy, EAGLE, PID Control</h2>
+            </div>
+            <div class="twelve columns content-body">
+                
+                <p>I built this mini Natbus with two team members as part of the Capstone project for the IEEE OPS program. Our goal was to construct an autonomous car that can negotiate a preset course in the shortest time possible. The course is marked by a 1-inch wide blue tape on a dark background. We did not know the path of the course before the attempt.</p>
+                
+                <p>Our first step was to design two distance sensors, which I used to measure the car’s deviation from the designated path. I designed a PCB with an IR LED and IR sensor on EAGLE software. The design was then sent to OSH Park for fabrication. I assembled the two sensors after I received the PCB’s a couple days later.</p>
+                
+                <figure class="cap-bot">
+                    <a href="distance_sensor.JPG" target="new"><img alt="Distance Sensor" src="distance_sensor.JPG"></a>
+                    <figcaption>Distance Sensor</figcaption>
+                </figure>
+                
+                <p>The circuit of the Natbus was assembled on a breadboard, and was connected to two motors with 90-degree gearboxes. The motors were powered by a 9V battery and controlled by an H-Bridge IC, specifically the L293D H-Bridge. To facilitate motion, two large drive wheels and one ball bearing was used. The information collected by the distance sensors was processed by the Teensy-LC microcontroller, which regulated how the motors moved.</p>
+                
+                <figure class="cap-bot">
+                    <a href="ingredients.JPG" target="new"><img alt="Mini Natbus Materials" src="ingredients.JPG"></a>
+                    <figcaption>Mini Natbus Materials</figcaption>
+                </figure>
+                
+                <p>After the circuit was hooked up, a PID control was implemented on the Teensy-LC. After multiple trials, an optimized PID control was found. To finish off, I attached a 3.7V Li-po battery to power the microcontroller.</p>
+                
+                <figure class="cap-bot">
+                    <a href="finished_natbus.JPG" target="new"><img alt="Finished Natbus model" src="finished_natbus.JPG"></a>
+                    <figcaption>Finished Natbus model</figcaption>
+                </figure>
+                            
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
