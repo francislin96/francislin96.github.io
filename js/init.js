@@ -77,81 +77,62 @@
 /*	Fade In/Out Primary Navigation
 ------------------------------------------------------*/
 
-//   $(window).on('scroll', function() {
-//
-//		var h = $('header').height();
-//		var y = $(window).scrollTop();
-//      var nav = $('#nav-wrap');
-//
-//	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-//	      nav.fadeOut('fast');
-//	   }
-//      else {
-//         if (y < h*.20) {
-//            nav.removeClass('opaque').fadeIn('fast');
-//         }
-//         else {
-//            nav.addClass('opaque').fadeIn('fast');
-//         }
-//      }
-//
-//	});
+   $(window).on('scroll', function() {
+
+		var h = $('header').height();
+		var y = $(window).scrollTop();
+      var nav = $('#nav-wrap');
+
+	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
+	      nav.fadeOut('fast');
+	   }
+      else {
+         if (y < h*.20) {
+            nav.removeClass('opaque').fadeIn('fast');
+         }
+         else {
+            nav.addClass('opaque').fadeIn('fast');
+         }
+      }
+
+	});
+
 
 /*----------------------------------------------------*/
-/*	Click to Hide
+/*	Modal Popup
 ------------------------------------------------------*/
-          
-/* Skills */
-    $("#impossible-list #skills h1").click(function(){
-        if($('#hide-skills').css('display') == 'none'){
-            $("#hide-skills").show();
-        }
-        else{
-            $("#hide-skills").hide();
-        }
+
+    $('.item-wrap a').magnificPopup({
+
+       type:'inline',
+       fixedContentPos: false,
+       removalDelay: 200,
+       showCloseBtn: false,
+       mainClass: 'mfp-fade'
+
     });
-     
-/* Health/Fitness */
-     $("#impossible-list #health-fitness h1").click(function(){
-        if($('#hide-health-fitness').css('display') == 'none'){
-            $("#hide-health-fitness").show();
-        }
-        else{
-            $("#hide-health-fitness").hide();
-        }
+
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+    		e.preventDefault();
+    		$.magnificPopup.close();
     });
-     
-/* Professional */
-     $("#impossible-list #professional h1").click(function(){
-        if($('#hide-professional').css('display') == 'none'){
-            $("#hide-professional").show();
-        }
-        else{
-            $("#hide-professional").hide();
-        }
-    });
-     
-/* Life */
-     $("#impossible-list #life h1").click(function(){
-        if($('#hide-life').css('display') == 'none'){
-            $("#hide-life").show();
-        }
-        else{
-            $("#hide-life").hide();
-        }
-    });
-     
-/* Bucket List */
-     $("#impossible-list #bucket-list h1").click(function(){
-        if($('#hide-bucket-list').css('display') == 'none'){
-            $("#hide-bucket-list").show();
-        }
-        else{
-            $("#hide-bucket-list").hide();
-        }
-    });
-     
-     
+
+
+/*----------------------------------------------------*/
+/*	Flexslider
+/*----------------------------------------------------*/
+   $('.flexslider').flexslider({
+      namespace: "flex-",
+      controlsContainer: ".flex-container",
+      animation: 'slide',
+      controlNav: true,
+      directionNav: false,
+      smoothHeight: true,
+      slideshowSpeed: 7000,
+      animationSpeed: 600,
+      randomize: false,
+   });
+
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
@@ -160,7 +141,7 @@
 
       $('#image-loader').fadeIn();
 
-      var contactName = $('#contactForm #contactFName').val()+$('#contactForm #contactLName').val();
+      var contactName = $('#contactForm #contactName').val();
       var contactEmail = $('#contactForm #contactEmail').val();
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
