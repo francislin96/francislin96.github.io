@@ -395,7 +395,7 @@ ul#nav li a:hover{ background-color: #FF6000; color: #fff;}
 #contact {
    background: #ededed;
    padding-top: 96px;
-   padding-bottom: 102px;
+   padding-bottom: 0px;
    color: #313131;
 }
 #contact .section-head { margin-bottom: 42px; }
