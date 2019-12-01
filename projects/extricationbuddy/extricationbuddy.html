@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Extrication Buddy</title>
+	<meta name="description" content="Francis Lin Extrication Buddy">
+	<meta name="author" content="Francis Lin">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="../../css/default.css">
+	<link rel="stylesheet" href="../../css/page.css">
+   <link rel="stylesheet" href="../../css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../images/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="../../index.html">Home</a></li>
+            <li><a class="smoothscroll" href="../../index.html#about">About</a></li>
+            <li class="current"><a class="smoothscroll" href="../../index.html#projects">Projects</a></li>
+            <li><a class="smoothscroll" href="../../index.html#resume">Experience</a></li>
+            <li><a class="smoothscroll" href="../../index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+    <!-- Content
+   ================================================== -->
+    
+    <section id="page">
+        <div class="row">
+            <div class="content-header">
+                <h1>Extrication Buddy</h1>
+                <h2>November 1, 2019 - November 15, 2019&nbsp;&nbsp;|&nbsp;&nbsp;Unity, Vuforia, Autodesk</h2>
+            </div>
+            
+            <h3>Introduction</h3>
+            
+            <p>On November 1, <a href="https://www.linkedin.com/in/levi-adissi/">Levi</a> and I attended the 2019 L.A. <a href="https://www.techtoprotectchallenge.org/">Tech to Protect Hackathon </a>, a hackathon to create innovative technologies for public safety agencies. In this contest, there were 10 different prompts to choose from. Since Levi and I were interested in learning augmented reality, we decided to enter <a href="https://www.techtoprotectchallenge.org/contest/contest-003/">Contest #003 - Looking Under the Hood: Using Augmented Reality to Help Save Trapped Passengers</a>.</p>
+            
+            <h3>Problem Statement</h3>
+            
+            <p>When first responders arrive on the scene of a vehicle accident, the top priority is to rescue the passengers and treat their injuries. When passengers are trapped inside the vehicle, tools such as the “Jaws-of-Life” are needed to physically remove vehicle parts around the passenger. To do their jobs safely and efficiently, emergency responders need up-to-date information about the vehicle design and construction to know the safe and unsafe extrication cut points. Accidentally cutting into airbags or electric vehicle batteries would be extremely dangerous to both the passenger and emergency responders. While vehicle diagrams currently exist, it may be cumbersome to locate information for the correct vehicle make and model, the vehicle orientation may be different at the accident scene, and 2D images may be difficult to sift through</p>
+            
+            <h3>Solution</h3>
+            
+            <p>To solve these problems, we propose Extrication Buddy. Extrication Buddy is a phone application that uses machine learning to identify the vehicle make and model, augmented reality to overlay hazards and extrication cut zones on the vehicle, and an interactive 3D model to display additional extrication information. Below, you can see a <a href="https://www.youtube.com/embed/zuV9UdKREBE">demo</a> of Extrication Buddy in action:</p>
+            
+            <div class="row">
+                <div class="two columns"></div>
+                    <div class="eight columns video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zuV9UdKREBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <div class="two columns"></div>
+            </div>
+            
+            <p>Several technologies were needed to create Extrication Buddy. For the demo, the 3D model vehicle was downloaded from <a href="https://free3d.com/">Free3d.com</a> and further modified on Autodesk to include the extrication cut zones and hazardous parts. The augmented reality model targets were created using <a href="https://library.vuforia.com/tools/model-target-generator.html">Vuforia Model Target Generator (MTG)</a>. Vuforia MTG takes a 3D object and converts it to a dataset that interfaces with the Vuforia SDK. Since Unity can be integrated with the Vuforia engine, we used Unity as our platform for Extrication Buddy.You can view the source code of Extrication Buddy at the link below:</p>
+            
+            <div class="text-container">
+                <div class="twelve columns">
+                    <div class="download">
+                        <a href="https://github.com/francislin96/Extrication-Buddy" class="button"><i class="fa fa-download"></i>Extrication Buddy Github Repo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Summary</h3>
+            
+            <p>During our time working on Extrication Buddy, we really enjoyed talking to the great community of emergency responders and learning from their great wealth of experience. We admire their strength and dedication to the safety of society. If selected to continue work on Extrication Buddy, we would love to continue working with them, NFPA, and car manufacturers to help the emergency responders more effectively and safely rescue passengers from vehicle accidents.</p>
+                
+        </div>
+    </section>
+    </body>
+</html>
