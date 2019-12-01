@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>2019 NBA Hackathon Final Phase</title>
+	<meta name="description" content="Francis Lin 2019 NBA Hackathon Final Phase">
+	<meta name="author" content="Francis Lin">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="../../css/default.css">
+	<link rel="stylesheet" href="../../css/page.css">
+   <link rel="stylesheet" href="../../css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../js/modernizr.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../images/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="../../index.html">Home</a></li>
+            <li><a class="smoothscroll" href="../../index.html#about">About</a></li>
+            <li class="current"><a class="smoothscroll" href="../../index.html#projects">Projects</a></li>
+            <li><a class="smoothscroll" href="../../index.html#resume">Experience</a></li>
+            <li><a class="smoothscroll" href="../../index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+    <!-- Content
+   ================================================== -->
+    
+    <section id="page">
+        <div class="row">
+            <div class="content-header">
+                <h1>2019 NBA Hackathon Final Phase</h1>
+                <h2>July 2019 - September 2019&nbsp;&nbsp;|&nbsp;&nbsp;Python: pandas</h2>
+            </div>
+            
+            <h3>Introduction</h3>
+            
+            <p>On July 26, I was informed that I had been accepted to Phase II of the NBA Hackathon! They had also connected me with three amazing individuals who would be my team members for this challenge: <a href="https://www.linkedin.com/in/kevindewandeler/">Kevin Dewandeler</a>, <a href="https://www.linkedin.com/in/bokiwang/">Boki Wang</a>, and Charles Floyd. After submitting an abstract on August 4, we were accepted to the final phase of the NBA Hackathon: to execute on the abstract and present our project in Secaucus, New Jersey on September 21. The project that we presented on was creating a new, insightful metric for measuring player fatigue.</p>
+            
+            <figure class="cap-bot">
+                <a href="nbahack2019team.jpg" target="new"><img alt="My Team at the Hackathon" src="nbahack2019team.jpg"></a>
+                <figcaption>My Team at the Hackathon!</figcaption>
+            </figure>
+            
+            <h3>Project</h3>
+            
+            <p>At the highest level of basketball, even a slight drop in performance may be the difference between victory and defeat. Therefore, it is essential to monitor a player’s fatigue level so that coaches can make the correct lineup decisions to optimize player performance and prevent over-exhaustion. However, while there are many studies that attempt to quantify the effects of fatigue on athletes, they are often flawed for several reasons. Firstly, several studies artificially induce fatigue in players by having them perform predetermined actions only for the sake of fatiguing them, thus failing to truly simulate the stresses that players undergo in an actual basketball game. Additionally, these studies often evaluate players using tests such as jumping protocols or self-reports, which are only tangentially related to performance on the basketball court. Finally, these studies do not provide fatigue measurements in real time, thereby denying NBA coaches of a potentially effective instrument with which they can use to make decisions as the game unfolds.</p>
+            
+            <p>Therefore, we propose a novel method to track fatigue levels in NBA players in real time. To model player fatigue levels, we designed two metrics capable to capture the dynamic relationship between fatigue and recovery: 1) a fatigue index to indicate individual fatigue level at any time during the game, and 2) an accumulated fatigue function to model individual fatigue progression over a season.</p>
+            
+            <p>Individualized fatigue index, FI, captures fatigue level for a player at any time point in the game. FI is a function of world time, defined as the actual playing time scaled by Play Ratio, the ratio between actual minutes played and the total time elapsed. It can be expressed as:</p>
+            
+            <p>\[ FI = TIME_{play} * PlayRatio\]</p>
+            
+            <p>\[PlayRatio = {TIME_{play} \over TIME_{play} + TIME_{rest}}\]</p>
+            
+            <p>We modeled the accumulation of fatigue as the sum of exponentially decayed previous fatigue index values as of a player’s final appearance in a game.</p>
+            
+            <p>\[F_t = \sum_{n=1}^{t-1} \tau^{t-n}FI_n\]</p>
+            
+            <p>We chose tau by fitting models to Ft with average minutes played in the regular season as a controlling variable. As responders, we used accumulated features from the provided tracking data, including normalized maximum velocity, speed ratios such as distance traveled at fast speed over distance traveled at slow speed, and acceleration measures such as peak acceleration.</p>
+
+            <p>Two exemplar illustrations of the fatigue metrics are demonstrated below.</p>
+            
+            <figure class="cap-bot">
+                <a href="FIexamples.png" target="new"><img alt="Fatigue metric examples" src="FIexamples.png"></a>
+                <figcaption>Fatigue Metric Examples</figcaption>
+            </figure>
+            
+            <p>We wanted to demonstrate the value of these fatigue metrics by comparing them to the traditional minutes-played metric. As seen in the figure below, a negative trend is much more pronounced in the relationship between our fatigue index and kinematic variables than the relationship between minutes-played metric and kinematic variables. This finding highlights the advantage of our fatigue index over the traditional minutes-played metric.</p>
+            
+            <figure class="cap-bot">
+                <a href="FIvMinutesPlayed.png" target="new"><img alt="Fatigue Index vs Minutes Played" src="FIvMinutesPlayed.png"></a>
+                <figcaption>Fatigue Index vs Minutes Played</figcaption>
+            </figure>
+            
+            <p>Besides a clear negative relationship between our fatigue index and player movement, we also discovered negative relationships between our fatigue index and most player statistics. At a possession level, the logistic regression results showed a significant (p = 0.01) negative relationship between accumulated fatigue and most statistics: 2FG%, USG%, rebound%, steal%, assist%, turnover%, foul%, and block%.</p>
+            
+            <p>The repercussions of the fatigue and accumulated fatigue index applicable for players and coaches in 3 specific ways:</p>
+            
+            <ol>
+                <li><i>Coaches have access to real-time calculation of player fatigue level during the game</i> : Coaches can now complement their experience and familiarity with players with a simple but scientific calculation of fatigue level to understand when a player has reached a certain fatigue level. Because this calculation can easily be done in real time, the coach can make instant player rotation decisions and substitutions. Perhaps more importantly, coaches now also have a method to calculate opponent player fatigue levels, helping the coach manage matchups.</li>
+                <li><i>Coaches can prevent players reaching their fatigue tipping point</i> : Analysis has shown that player performance declines more dramatically after reaching a certain fatigue index. In order to keep players performing above a certain level, coaches can rotate players so that they do not reach that threshold, especially during critical points of the game.</li>
+                <li><i>Coaches can make better decisions on who should take a shot</i> : Because the acceleration and velocity of players decrease when they are more fatigued, on basketball plays that require high athleticism, coaches could use the fatigue index of a player when deciding how to assign shot attempts to players.</li>
+            </ol>
+            
+            <h3>Summary</h3>
+            
+            <p>Throughout this project, my team members have been extremely helpful and supportive. Even though we came into the project as strangers, we had multiple conference calls across different time zones to absolve data issues, communicate solutions, and create milestones. After only 8 weeks, we created a novel way for measuring fatigue levels of players in real-time, proved that our fatigue index was a more effective indicator of kinematic performance than using minutes-played, and showed that our fatigue index negatively correlated with player performance measured by box score and advanced statistics. It was a pleasure working with them and seeing this project through.</p>
+                
+        </div>
+    </section>
+    </body>
+</html>

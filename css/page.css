@@ -212,7 +212,7 @@ body {
 	height: 100%;
     padding-bottom:30px;
 }
-#page ul, #page li {
+#page ul li {
     list-style-position: outside;
     list-style-type: disc;
     line-height: 20px;
