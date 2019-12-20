@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Is Today Friday The 13th?</title>
+	<meta name="description" content="Francis Lin Is Today Friday The 13th?">
+	<meta name="author" content="Francis Lin">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="../../css/default.css">
+	<link rel="stylesheet" href="../../css/page.css">
+   <link rel="stylesheet" href="../../css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../images/favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="../../index.html">Home</a></li>
+            <li><a class="smoothscroll" href="../../index.html#about">About</a></li>
+            <li class="current"><a class="smoothscroll" href="../../index.html#projects">Projects</a></li>
+            <li><a class="smoothscroll" href="../../index.html#resume">Experience</a></li>
+            <li><a class="smoothscroll" href="../../index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+    <!-- Content
+   ================================================== -->
+    
+    <section id="page">
+        <div class="row">
+            <div class="content-header">
+                <h1>Is Today Friday The 13th?</h1>
+                <h2>December 2019 &nbsp;&nbsp;|&nbsp;&nbsp;Python</h2>
+            </div>
+            
+            <p>Whether you are superstitious or not, chances are that you have heard of <a href="https://en.wikipedia.org/wiki/Friday_the_13th">Friday the 13th</a>, a date considered to be filled with bad luck and dreadful things to come. In fact, it is considered to be so unlucky that the phobia of Friday the 13th has an official name: <a href="https://phobia.wikia.org/wiki/Paraskevidekatriaphobia">paraskevidekatriaphobia</a>. Luckily for paraskevidekatriaphobics, there is a subreddit that will tell inform you whether it is Friday the 13th (because how else would you know?).</p>
+            
+            <p><a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> is a very simple subreddit. Every day, the question “Is Today Friday the 13th?” is posted and the body of the post would either be “Yes.” or “No.” depending on whether it is indeed Friday the 13th on that date. Although this might look primitive on the surface, the <a href="https://www.reddit.com/r/IsTodayFridayThe13th/comments/d3ozdj/is_today_friday_the_13th/">most popular post on /r/IsTodayFridayThe13th</a> currently has over 140k upvotes! Clearly, redditors appreciate the precious information coming from this ingenious public service.</p>
+            
+            <p>I wanted to take this opportunity to take a look at the popularity of <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> over the years. Using the <a href="https://pushshift.io/">pushshift.io API</a>, I was able to identify all the posts on subreddit in a given time frame. I then fed the post IDs into the <a href="https://www.reddit.com/wiki/api">Reddit API</a>, where I can extract information about the post such as the number of upvotes and comments. Executing these set of steps for each post in the subreddit, I was able to create a visualization to show how the popularity of <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> posts changed throughout the lifetime of the subreddit.</p>
+            
+            <figure class="cap-bot">
+                <a href="IsTodayFridayThe13thUpvotes.png" target="new"><img alt="Popularity of /r/IsTodayFridayThe13th Posts" src="IsTodayFridayThe13thUpvotes.png"></a>
+                <figcaption>Popularity of /r/IsTodayFridayThe13th Posts</figcaption>
+            </figure>
+            
+            <p>After graphing the number of upvotes for each post, the pattern becomes obvious. Every time it is Friday the 13th, the popularity that post skyrockets. What is more interesting are the smaller jumps, caused when users reference <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> on popular comments or popular subreddits.</p>
+            
+            <p>For example, on January 19, 2018, <a href="https://www.reddit.com/user/therealmadhat/">/u/therealmadhat</a> posted on the subreddit <a href="https://www.reddit.com/r/ofcoursethatsathing/">/r/ofcoursethatsathing</a>, causing the <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> post to reach more than 13k upvotes. On July 25, 2018, <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> also received a similar bump when <a href="https://www.reddit.com/user/orchumaro/">/u/orchumaro</a> nominated the subreddit as the weirdest subreddit through a question on <a href="https://www.reddit.com/r/AskReddit/">/r/AskReddit</a>.</p>
+            
+            <p>I also wanted to point out that every April Fool's Day, <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> is wrong, which causes a miniscule spike as well.</p>
+            
+            <p>You can see a similar pattern with the number of comments per post.</p>
+            
+            <figure class="cap-bot">
+                <a href="IsTodayFridayThe13thComments.png" target="new"><img alt="Number of Comments on /r/IsTodayFridayThe13th Posts" src="IsTodayFridayThe13thComments.png"></a>
+                <figcaption>Number of Comments on /r/IsTodayFridayThe13th Posts</figcaption>
+            </figure>
+            
+            <p>While subscriber data was only available after March 13, 2018 on <a href="https://pushshift.io/">pushshift.io</a>, it was clear the number of subscribers also spikes drastically whenever Friday the 13th rolls around. </p>
+            
+            <figure class="cap-bot">
+                <a href="IsTodayFridayThe13thSubscribers.png" target="new"><img alt="Number of Subscribers on /r/IsTodayFridayThe13th Posts" src="IsTodayFridayThe13thSubscribers.png"></a>
+                <figcaption>Number of Subscribers on /r/IsTodayFridayThe13th Posts</figcaption>
+            </figure>
+            
+            <p>Well, what are you waiting for? Don't you want to know if it's Friday the 13th today? Go visit the <a href="https://www.reddit.com/r/IsTodayFridayThe13th/">/r/IsTodayFridayThe13th</a> subreddit and see for yourself!</p>
+            
+            <h6 align="left">*Last updated: Dec 20, 2019</h6>
+            
+        </div>
+    </section>
+    </body>
+</html>
